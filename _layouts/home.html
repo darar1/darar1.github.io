@@ -1,0 +1,65 @@
+---
+layout: default
+---
+
+<div class="page-content">
+    <div class="wrapper">
+        <div class="home">
+            <!-- Profile section -->
+            <div class="profile-section">
+                <!-- Test if image exists -->
+                {% if site.baseurl %}
+                    {% assign image_path = site.baseurl | append: '/assets/images/profile.jpg' %}
+                {% else %}
+                    {% assign image_path = '/assets/images/profile.jpg' %}
+                {% endif %}
+                
+                <img src="{{ image_path }}" alt="Profile picture" class="profile-image" onerror="this.style.display='none'">
+                
+                <div class="social-links">
+                    <p><a href="/assets/pdf/cv.pdf">[CV]</a></p>
+                    <p><a href="https://github.com/{{ site.github_username }}">[GitHub]</a></p>
+                    <p><a href="https://linkedin.com/in/{{ site.linkedin_username }}">[LinkedIn]</a></p>
+                </div>
+            </div>
+
+            <!-- Content section -->
+            <div class="content-section">
+                {{ content }}
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .home {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        gap: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .profile-image {
+        width: 100%;
+        max-width: 300px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+
+    .social-links {
+        margin-top: 20px;
+    }
+
+    .social-links a {
+        color: #0366d6;
+        text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+        .home {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
