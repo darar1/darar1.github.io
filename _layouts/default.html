@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include head.html %}
+    <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+</head>
+<body>
+    <main class="main-content">
+        <div class="layout-container">
+            <!-- Left Column -->
+            <aside class="left-column">
+                <div class="image-container">
+                    <img src="{{ '/assets/images/profile.jpg' | relative_url }}" alt="Profile Photo" class="profile-pic">
+                </div>
+                <p class="photo-caption">Photographer: Kris Cheng</p>
+                <div class="contact-links">
+                    <a href="mailto:darar@stanford.edu">Email</a>|
+                    <a href="{{ '/assets/pdf/cv.pdf' | relative_url }}" target="_blank">Download CV</a>|
+                    <a href="https://github.com/darar1" target="_blank">GitHub</a>|
+                    <a href="https://linkedin.com/in/darar" target="_blank">LinkedIn</a>
+                </div>
+            </aside>
+
+            <!-- Right Column -->
+            <section class="right-column">
+                <h1>{{ page.title }}</h1>
+                <p class="bio">I am currently a ML research engineer at <a href="https://aim.stanford.edu" target="_blank">Stanford AIM Lab</a> where I work with patients, doctors, and scientists to apply and evaluate generative and predictive models in anesthesia and perioperative medicine.</p>
+                <p>I previously helped develop an at-home health-monitoring hardware called <a href="https://www.forbes.com/sites/johnkoetsier/2022/03/19/1000x-more-sensitive-than-apple-watch-cor-is-a-fitbit-for-your-blood" target="_blank">COR</a> and worked on helping the state of Connecticut allocate resources in addressing opioid overdose epidemic with a <a href="https://about.gitlab.com/blog/2018/09/05/how-telesphora-is-tackling-the-opioid-crisis-machine-learning-human-centered-design" target="_blank">prediction model</a>. My career started as a Clinical Research Associate at Stanford School of Medicine, where I ran studies evaluating digital health devices and tools and helped organize <a href="https://medicinex.stanford.edu" target="_blank">Medicine X</a> in 2014 and 2015, and a day-long workshop at the White House in 2016.</p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; {{ site.title }} {{ "now" | date: "%Y" }}</p>
+    </footer>
+</body>
+</html>

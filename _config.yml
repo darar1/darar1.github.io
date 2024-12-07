@@ -1,37 +1,17 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-
 # Site settings
 title: Dara Rouholiman
 email: darar@stanford.edu
 author: Dara Rouholiman
-description: >- # this means to ignore newlines until "baseurl:"
-  ML Research Engineer at Stanford AIM Lab, developing health-tech products 
-  and applying machine learning to clinical and spectra data.
-#baseurl: "" # the subpath of your site, e.g. /blog
-#url: "" # the base hostname & protocol for your site, e.g. http://example.com
+#description: >
+
+#baseurl: "/darar1.github.io" # Replace with your repo name (e.g., /darar.github.io)
+#url: "https://darar1.github.io"
+
 # Social media and professional links
 twitter_username: daraRmedicine
 github_username: darar1
 linkedin_username: darar
-
+google_scholar_username: 6SG4O1YAAAAJ
 # Build settings
 markdown: kramdown
 theme: minima
@@ -40,10 +20,10 @@ plugins:
   - jekyll-seo-tag
 
 # Collections
-collections:
-  notes:
-    output: true
-    permalink: /notes/:title/
+#collections:
+  #notes:
+    #output: true
+    #permalink: /notes/:title/
 
 # Default layouts
 defaults:
