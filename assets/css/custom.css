@@ -1,24 +1,22 @@
+
 /* Main Layout */
 .layout-container {
     display: flex;
     flex-direction: row;
     gap: 40px;
     margin: 40px auto;
-    max-width: 1100px; /* Restrict total width */
+    max-width: 1400px; /* Restrict total width */
     padding: 20px;
     background-color: #ffffff;
     border-radius: 0;
     box-shadow: none;
 }
 
-/* Invisible Header/Menu Band */
+/* Header Styling */
 header {
-    height: 200px; /* Increased height to push content down */
-    background-color: transparent; /* Keep invisible */
-}
-
-.layout-container {
-    margin-top: 20px; /* Add space below the header */
+    border-bottom: 1px solid #e0e0e0 !important; /* Ensure thin gray line */
+    height: 80px !important; /* Slight height to show separation */
+    background-color: transparent; /* Keep invisible background */
 }
 
 /* Left Column */
@@ -30,9 +28,11 @@ header {
     align-items: flex-start; /* Align items to the left */
 }
 
+/* image */
+
 .image-container {
     width: 100%;
-    max-width: 500px; /* Increased max width for larger image */
+    max-width: 800px; /* Increased max width for larger image */
     display: flex;
     align-items: center; /* Align vertically */
     justify-content: flex-start; /* Align to the left */
@@ -42,7 +42,7 @@ header {
 
 .image-container img.profile-pic {
     width: 100%;
-    max-width: 500px; /* Ensure a larger image */
+    max-width: 800px; /* Ensure a larger image */
     height: auto;
     object-fit: cover;
     border-radius: 8px;
@@ -65,15 +65,6 @@ header {
     font-size: 1em;
 }
 
-.contact-links a {
-    color: #007bff;
-    text-decoration: none;
-    margin-right: 10px;
-}
-
-.contact-links a:hover {
-    text-decoration: underline;
-}
 
 /* Right Column */
 .right-column {
@@ -89,6 +80,7 @@ header {
 }
 
 .right-column .bio {
+    color: #444; /* Consistent gray color for paragraphs */
     font-size: 1.1em;
     margin-bottom: 20px;
     color: #444;
@@ -101,12 +93,13 @@ header {
 /* Footer */
 footer {
     text-align: center;
-    margin-top: 30px;
-    padding-top: 10px; /* Reduce padding for subtlety */
-    border-top: 0.5px solid #e0e0e0; /* Thinner, lighter line */
+    margin-top: 60px;
+    padding-top: 10px;
+    border-top: 0.5px solid #e0e0e0; /* Add subtle border for separation */
     font-size: 0.9em;
     color: #777;
 }
+
 
 /* Responsive Layout */
 @media (max-width: 768px) {
@@ -121,22 +114,27 @@ footer {
     }
 
     .image-container img.profile-pic {
-        width: 100%;
-        max-width: 300px; /* Smaller size on small screens */
+        width: 95%;
+        max-width: 768px; /* Smaller size on small screens */
         height: auto;
     }
 
     .photo-caption {
-        text-align: center; /* Center on smaller screens */
-        margin-left: 0; /* Remove left margin on small screens */
+        text-align: left; /* Center on smaller screens */
+        margin-left: -20;  /*Remove left margin on small screens */
     }
 
     .contact-links {
-        text-align: center; /* Center contact links on smaller screens */
+        text-align: left; /* Center contact links on smaller screens */
     }
 
     .right-column {
         padding: 0;
-        text-align: center;
+        text-align: left;
     }
+}
+/* Header Styling Enforced */
+header {
+    border-bottom: 1px solid #e0e0e0 !important; /* Visible thin gray line */
+    height: 10px; /* Add slight height for visibility */
 }

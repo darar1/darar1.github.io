@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +6,7 @@
     <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 </head>
 <body>
+    <header></header>
     <main class="main-content">
         <div class="layout-container">
             <!-- Left Column -->
@@ -14,10 +16,13 @@
                 </div>
                 <p class="photo-caption">Photographer: Kris Cheng</p>
                 <div class="contact-links">
-                    <a href="mailto:darar@stanford.edu">Email</a>|
-                    <a href="{{ '/assets/pdf/cv.pdf' | relative_url }}" target="_blank">Download CV</a>|
-                    <a href="https://github.com/darar1" target="_blank">GitHub</a>|
-                    <a href="https://linkedin.com/in/darar" target="_blank">LinkedIn</a>
+                    <p>darar[at]stanford[dot]edu</p>
+                    <p><a href="{{ '/assets/pdf/cv.pdf' | relative_url }}" target="_blank">Download CV</a></p>
+                    <p>
+                        <a href="https://github.com/darar1" target="_blank">GitHub</a> |
+                        <a href="https://linkedin.com/in/darar" target="_blank">LinkedIn</a> |
+                        <a href="https://scholar.google.com/citations?user=6SG4O1YAAAAJ" target="_blank">Google Scholar</a>
+                    </p>
                 </div>
             </aside>
 
@@ -31,7 +36,7 @@
     </main>
 
     <footer>
-        <p>&copy; {{ site.title }} {{ "now" | date: "%Y" }}</p>
+        <p>&copy; Dara Rouholiman 2024</p>
     </footer>
 </body>
 </html>

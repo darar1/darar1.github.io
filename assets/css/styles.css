@@ -1,80 +1,161 @@
----
----
 
-/* Base styles */
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  line-height: 1.6;
-  color: #24292e;
-  margin: 0;
-  padding: 20px;
+/* Ensure Header Border in Styles */
+header {
+    border-bottom: 1px solid #e0e0e0 !important;
+    height: 10px;
+}
+/* Main Layout */
+.layout-container {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin: 40px auto;
+    max-width: 1100px; /* Restrict total width */
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 0;
+    box-shadow: none;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 300px 1fr;
-  gap: 40px;
-  padding: 20px;
+/* Invisible Header/Menu Band */
+header {
+    border-bottom: 0.5px solid #e0e0e0 !important; /* Enforce thin gray line for separation */
+    border-bottom: 0.5px solid #e0e0e0; /* Thin gray line for separation */
+    height: 200px; /* Increased height to push content down */
+    background-color: transparent; /* Keep invisible */
 }
 
-/* Profile section */
-.profile-section {
-  .profile-image {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-  }
+.layout-container {
+    margin-top: 20px; /* Add space below the header */
+}
 
-  .social-links {
-    margin-top: 20px;
+/* Left Column */
+.left-column {
+    flex: 0 0 40%; /* Fixed 40% width */
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    
-    a {
-      color: #0366d6;
-      text-decoration: none;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
+    justify-content: flex-start;
+    align-items: flex-start; /* Align items to the left */
 }
 
-/* Content section */
-.content-section {
-  .bio {
-    h1 {
-      margin-top: 0;
-      color: #24292e;
-    }
-    
-    a {
-      color: #0366d6;
-      text-decoration: none;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
+.image-container {
+    width: 100%;
+    max-width: 500px; /* Increased max width for larger image */
+    display: flex;
+    align-items: center; /* Align vertically */
+    justify-content: flex-start; /* Align to the left */
+    overflow: hidden;
+    flex-direction: column;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-  .container {
-    grid-template-columns: 1fr;
-  }
-  
-  .profile-section {
+.image-container img.profile-pic {
+    width: 100%;
+    max-width: 500px; /* Ensure a larger image */
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+.photo-caption {
+    margin-top: 10px;
+    font-size: 0.7em;
+    color: #777;
+    text-align: left; /* Align to the left */
+    margin-left: 0; /* Match image edge */
+    max-width: 500px; /* Match the image size */
+}
+
+/* Links (Email, CV, Socials) */
+.contact-links {
+    margin-top: 20px;
+    text-align: left; /* Align links to the left */
+    font-size: 1em;
+}
+
+.contact-links a {
+    color: #007bff;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.contact-links a:hover {
+    text-decoration: underline;
+}
+
+/* Right Column */
+.right-column {
+    flex: 1;
+    font-family: 'Helvetica Neue', sans-serif;
+    line-height: 1.8;
+    padding: 0 20px;
+}
+
+.right-column h1 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+.right-column .bio {
+    color: #444; /* Consistent gray color for paragraphs */
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.right-column p {
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
     text-align: center;
-    
-    .social-links {
-      flex-direction: row;
-      justify-content: center;
-      flex-wrap: wrap;
+    margin-top: 30px;
+    padding-top: 10px; /* Reduce padding for subtlety */
+    border-top: 0.5px solid #e0e0e0; /* Thinner, lighter line */
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .layout-container {
+        flex-direction: column;
     }
-  }
+
+    .left-column {
+        flex: 1;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .image-container img.profile-pic {
+        width: 100%;
+        max-width: 300px; /* Smaller size on small screens */
+        height: auto;
+    }
+
+    .photo-caption {
+        text-align: center; /* Center on smaller screens */
+        margin-left: 0; /* Remove left margin on small screens */
+    }
+
+    .contact-links {
+        text-align: center; /* Center contact links on smaller screens */
+    }
+
+    .right-column {
+        padding: 0;
+        text-align: center;
+    }
+}
+/* Header Styling Enforced */
+header {
+    border-bottom: 1px solid #e0e0e0 !important; /* Visible thin gray line */
+    height: 10px; /* Add slight height for visibility */
+}
+
+/* Harmonize Paragraph Colors */
+.right-column .bio, .content-section .bio {
+    color: #444; /* Unified gray color */
 }
