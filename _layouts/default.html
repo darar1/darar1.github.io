@@ -8,6 +8,7 @@
 <body>
     <header></header>
     <main class="main-content">
+        <!-- ── TWO‑COLUMN GRID ───────────────────────────────────────────── -->
         <div class="layout-container">
             <!-- Left Column -->
             <aside class="left-column">
@@ -26,17 +27,40 @@
                 </div>
             </aside>
 
-            <!-- Right Column -->
+            <!-- Right Column  ─────────────────-->
             <section class="right-column">
                 <h1>{{ page.title }}</h1>
                 <p class="bio">I am currently a ML research engineer at <a href="https://aim.stanford.edu" target="_blank">Stanford AIM Lab</a> where I work with patients, doctors, and scientists to apply and evaluate generative and predictive models in anesthesia and perioperative medicine.</p>
                 <p>I previously helped develop an at-home health-monitoring hardware called <a href="https://www.forbes.com/sites/johnkoetsier/2022/03/19/1000x-more-sensitive-than-apple-watch-cor-is-a-fitbit-for-your-blood" target="_blank">COR</a> and worked on helping the state of Connecticut allocate resources in addressing opioid overdose epidemic with a <a href="https://about.gitlab.com/blog/2018/09/05/how-telesphora-is-tackling-the-opioid-crisis-machine-learning-human-centered-design" target="_blank">prediction model</a>. My career started as a Clinical Research Associate at Stanford School of Medicine, where I ran studies evaluating digital health devices and tools and helped organize <a href="https://medicinex.stanford.edu" target="_blank">Medicine X</a> in 2014 and 2015, and a day-long workshop at the White House in 2016.</p>
             </section>
-        </div>
+            </div>
+            <!-- /.layout-container -->
+
+
+            <!-- ── FULL‑WIDTH NEWS (within same page width) ───────────────────── -->
+            <div class="layout-container">
+                <div class="recent-news">
+                    <h2>Recent News</h2>
+                    <ul>
+                        {% assign sorted_news = site.news | sort: 'date' | reverse %}
+                        {% for item in sorted_news %}
+                            <li>
+                                <strong>{{ item.date | date_to_string }}:</strong>
+                                <a href="https://www.nature.com/articles/s41746-025-01475-8.pdf" target="_blank">{{ item.title }} </a>
+                                {% if item.excerpt %}
+                                    <p>{{ item.excerpt | strip_html }}</p>
+                                {% endif %}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <!-- /.layout-container -->
+
     </main>
 
     <footer>
-        <p>&copy; Dara Rouholiman 2024</p>
+        <p>&copy; Dara Rouholiman 2025</p>
     </footer>
 </body>
 </html>

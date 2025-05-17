@@ -20,7 +20,10 @@ plugins:
   - jekyll-seo-tag
 
 # Collections
-#collections:
+collections:
+  news:
+    output: true
+    premalink: /news/:title/
   #notes:
     #output: true
     #permalink: /notes/:title/

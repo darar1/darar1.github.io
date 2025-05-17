@@ -87,7 +87,7 @@ header {
 }
 
 .right-column p {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 /* Footer */
@@ -110,7 +110,7 @@ footer {
     .left-column {
         flex: 1;
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 
     .image-container img.profile-pic {
@@ -133,8 +133,26 @@ footer {
         text-align: left;
     }
 }
+
+.recent-news {
+  margin-top: 0.5rem;
+}
+.recent-news h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+.recent-news ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+}
+.recent-news li + li {
+  margin-top: 0.75rem;
+}
+
 /* Header Styling Enforced */
 header {
     border-bottom: 1px solid #e0e0e0 !important; /* Visible thin gray line */
     height: 10px; /* Add slight height for visibility */
 }
+
+
